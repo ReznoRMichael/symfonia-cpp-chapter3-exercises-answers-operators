@@ -1,0 +1,64 @@
+I. Operator dwuargumentowy - wykonuje działanie na dwóch obiektach (argumentach). Operator jednoargumentowy wykonuje działanie tylko na jednym obiekcie (argumencie). Pierwszy wykonuje odejmowanie dwóch liczb, drugi zamienia liczbę na przeciwną.
+
+II. Program
+
+III. Program
+
+IV. operator preinkrementacji ++x - najpierw zmienna jest zwiększana o 1 i wtedy staje się wartością wyrażenia
+operator postinkrementacji x++ - najpierw stara wartość staje się wartością wyrażenia, dopiero potem zmienna jest zwiększana o 1
+
+V. int a = 4;
+cout << (a = 7) << endl; // na ekranie pojawi się liczba 7, gdyż przypisanie jest jednocześnie wartością wyrażenia
+
+VI. Różnica między operatorami arytmetycznymi a logicznymi - rezultat pracy operatorów logicznych jest typu bool (prawda lub fałsz/ 1 lub 0)
+
+VII. = to operator przypisania wartości do argumentu, a == to operator porównania dwóch argumentów.
+
+VIII. Oba operatory =,== mogą znaleźć się w wyrażaniu warunkowym if. Aby uniknąć ostrzeżeń kompilatora należy umieścić przypisanie = w dodatkowym nawiasie if((a = b))
+
+IX. wartość wyrażenia bool ruch = false; !!!ruch; to prawda.
+
+X. W wyrażeniu warunkowym najpierw zawsze obliczany jest człon najbliżej lewej strony. Jeśli się nie spełni, reszta nie jest obliczana. Działanie członu trzeciego to a > 15 (wartość przypisania jest jednocześnie wartością wyrażenia). Końcowa wartość obiektu c zależy, czy wszystkie warunki w if się spełniły czy nie.
+
+XI. (w ksiazce) różnica między operatorami logicznymi a bitowymi
+
+XII. Operator += to inaczej dodawanie z jednoczesnym przypisaniem. int m = 3; m += 2; m będzie miało wartość 5. (m = m + 2)
+
+XIII. Operator bitowego przesunięcia w lewo: pracuje na argumentach typu całkowitego. Bity z prawego brzegu słowa uzupełnione zostają zerami. Bity z lewego brzegu zostają zgubione.
+
+XIV. short int a = 0xf; short int rezultat = a << 2; a = 0000 0000 0000 1111; rezultat = 0000 0000 0011 1100;
+
+XV. Operator bitowego przesunięcia w prawo - bity z prawej strony są gubione. Bity z lewego brzegu słowa uzupełniane są zerami.
+
+XVI. Aby mieć pewność, że najbardziej znaczący bit będzie wypełniany zerami, należy pracować na obiektach typu całkowitego z przydomkiem unsigned.
+
+XVII. int x = 0; x=-1; x-=1; czyli x = 0; x = -1; x = x - 1 (-1 - 1 = -2)
+
+XVIII. Ile razy w lewo przesunąć bit, aby pomnożyć przez 1024; int ddd = 3; (jedno przesunięcie w lewo mnoży liczbę przez 2 = aby uzyskać 1024 = 2(2) *2 (4) *2 (8) *2 (16) *2 (32) *2 (64) *2 (128) *2 (256) *2(512) *2(1024) = 10 razy. Czyli ddd <<= 10;
+
+XIX. int x = 100; Wartość wyrażenia (x % 100) ? "Krakow" : "Londyn"; to Londyn (false)
+
+XX. sizeof(aaa) - poprawne
+sizeof(double) - poprawne
+sizeof(double + 2) - niepoprawne
+sizeof(double) + 2 - poprawne
+
+XXI. double mm; Dwie formy zastosowania rzutowania na typ int (niezalecane sposoby):
+(int)mm
+int(mm)
+stratność informacji oznacza, że informacja zostaje okrojona do mniej znaczących bitów (utratę tych bardziej znaczących); double = 64 bit, int = 32 bit;
+
+XXII. Wartość wyrażenia (55.2, 12, x++, a = b + 6, 4) to 4 (najbardziej z prawej strony)
+
+XXIII. Operator ma wyższy priorytet niż inny oznacza, że wyrażenie z tym operatorem będzie obliczane jako pierwsze.
+
+XXIV. Zapanować nad kolejnością priorytetów mimo braku znajomości priorytetów można poprzez używanie nawiasów ().
+
+XXV. Łączność operatorów jednoargumentowych - są prawostronnie łączne (oznacza, że działa na argument stojący po jego prawej stronie)
+
+XXVI. int a, b, c, d; b = 15, d = 2, a = b = c = d; Operatory dwuargumentowe są lewostronnie łączne, poza przypisaniem, które jest prawostronnie łączne.
+Czyli (a =(b =(c = d))); Wartości: a = 2; b = 2; c = 2; d = 2;
+
+XXVII. int a, b, c, d, rezultat; rezultat = a * b * c * d;
+
+XXVIII. Operatory dwuargumentowe są lewostronnie łączne. Czyli (((a * b) * c) * d);
