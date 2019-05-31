@@ -11,6 +11,10 @@ Learning C++. Doing all exercises and answering all questions from Chapter 4 of 
 * C++
 * CodeBlocks
 
+## To do after gaining more knowledge
+
+* 29 - 38 (advanced exercises - after reading the whole book)
+
 ## Contact
 
 [ReznoRMichael](https://github.com/ReznoRMichael)
